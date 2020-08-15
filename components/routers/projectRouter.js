@@ -20,6 +20,7 @@ router.post('/', validateProject(), (req, res) => {
 })
 
 // READ get all projects
+//attempted with async
 router.get('/', async (req, res) => {
     const projectList = await Projects.get();
     if (projectList) {
@@ -27,7 +28,7 @@ router.get('/', async (req, res) => {
 	} else {
 		return res
 			.status(500)
-			.json({ error: "The list of projects could not be retrieved." });
+			.json({ message: "The list of projects could not be retrieved." });
 	}
 })
 

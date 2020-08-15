@@ -30,11 +30,22 @@ router.post('/', (req, res, next) => {
     .catch(next)
 })
 
-router.get('/', (req, res) => {
-  res.status(200).json({
-    message: "No actions can be provided without a project_id"
-  })
-})
+router.get("/", async (req, res) => {
+	const actionsList = await actions.get();
+	if (actionsList) {
+		return res.status(200).json(actionsList);
+	} else {
+		return res
+			.status(500)
+			.json({ message: "The list of actions could not be retrieved." });
+	}
+});
+
+// router.get('/', validateId() (req, res) => {
+//   res.status(200).json({
+//     message: "No actions can be provided without a project_id"
+//   })
+// })
 
 // get action by id
 router.get('/:id', validateId(), (req, res) => {
