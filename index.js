@@ -1,8 +1,8 @@
-// require('dotenv').config(); 
-// const port = process.env.PORT || 2020;
+require('dotenv').config(); 
+const port = process.env.PORT || 2020;
 
 const server = require("./server.js");
-const port = 2020;
+// const port = 2020;
 
 
 server.listen(port, () => {
