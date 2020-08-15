@@ -38,15 +38,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
--   [ ] Mention two parts of Express that you learned about this week.
+-   [x] Mention two parts of Express that you learned about this week.
+            1. I learned that middleware functions are asynchronous - meaning you have to tell Express when it's done and when it needs to move on to the next middleware function in the stack (accomplished by using `next()`). 
+            2. Express has built-in middleware. This is different from 3rd party middleware (cors) or custom middleware (made yourself).
 
--   [ ] Describe Middleware?
+-   [x] Describe Middleware?
+            Middleware is a function that returns a function, providing a layer which allows the user to manipulate json data responses. Also, data is passed from one middleware to to another by accessing the shared state, which is the request and response objects. This occurred after a user action and before the app reducer, store, UI, etc.
 
--   [ ] Describe a Resource?
+-   [x] Describe a Resource?
+            An API is a server software that publishes a set of endpoints. These endpoints are used by clients to manage resources. Resources, in turn, is just the information or data the client is requesting a response for. A list of hobbies or actions could be a resource. Each resource can have a single URL for request handlers to use to perform CRUD operations.  
 
--   [ ] What can the API return to help clients know if a request was successful?
+-   [x] What can the API return to help clients know if a request was successful?
+            A status code or `res.status(200)` message can be returned to indicate whether a response or request was fulfilled successfully. 
 
--   [ ] How can we partition our application into sub-applications?
+-   [x] How can we partition our application into sub-applications?
+            Express routers can easily split an application into a sub-application to make it more modular and easy to maintain, for example `.use()` where you can place the URL and the subrouter you would like to use. 
 
 ## Minimum Viable Product
 
