@@ -8,7 +8,7 @@ const server = express();
 // const logger = require("./components/middleware/logger.js");
 // const projectRouter = require("./components/routers/projectRouter.js");
 // const actionRouter = require("./components/routers/actionRouter.js");
-const welcomeRouter = require("./components/routers/projectRouter.js");
+const welcomeRouter = require("./components/routers/welcomeRouter.js");
 
 // middleware
 // server.use(logger);
