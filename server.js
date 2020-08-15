@@ -19,15 +19,18 @@ server.use(welcomeRouter)
 // server.use("/api/projects", projectRouter);
 // server.use("/api/actions", actionRouter);
 
+// placed the below code in welcomeRouter
+    // server.get("/", (req, res) => {
+    // 	res.send(`<h2>Node Web API Sprint Challenge!</h2>`);
+    // });
 
 
-
-// error middleware catches all prev. middleware errors, so place last
+// error middleware catches all prev. middleware errors, so place last in file
 // server.use((err, req, res, next) => {
 	// console.log(err)
 	// res.status(500).json({
 	// 	message: "Something when wrong, try again later",
 	// })
-})
+// })
 
 module.exports = server;
