@@ -16,19 +16,19 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
--   [ ] Create a forked copy of this project.
--   [ ] Add your _Team Lead_ as collaborator on Github.
--   [ ] Clone your forked version of the Repository.
--   [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
--   [ ] Implement the project on this Branch, committing changes regularly.
--   [ ] Push commits: git push origin `firstName-lastName`.
+-   [x] Create a forked copy of this project.
+-   [x] Add your _Team Lead_ as collaborator on Github.
+-   [x] Clone your forked version of the Repository.
+-   [x] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+-   [x] Implement the project on this Branch, committing changes regularly.
+-   [x] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
--   [ ] Submit a Pull-Request to merge `firstName-lastName` Branch into `main` on **your fork, don't make Pull Requests against Lambda's repository**.
--   [ ] Please don't merge your own pull request.
--   [ ] Add your _Team Lead_ as a Reviewer on the Pull-request
--   [ ] Your _Team Lead_ will count the challenge as done by merging the branch into `main`.
+-   [x] Submit a Pull-Request to merge `firstName-lastName` Branch into `main` on **your fork, don't make Pull Requests against Lambda's repository**.
+-   [x] Please don't merge your own pull request.
+-   [x] Add your _Team Lead_ as a Reviewer on the Pull-request
+-   [x] Your _Team Lead_ will count the challenge as done by merging the branch into `main`.
 
 ## Commits
 
@@ -38,25 +38,31 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
--   [ ] Mention two parts of Express that you learned about this week.
+-   [x] Mention two parts of Express that you learned about this week.
+            1. I learned that middleware functions are asynchronous - meaning you have to tell Express when it's done and when it needs to move on to the next middleware function in the stack (accomplished by using `next()`). 
+            2. Express has built-in middleware. This is different from 3rd party middleware (cors) or custom middleware (made yourself).
 
--   [ ] Describe Middleware?
+-   [x] Describe Middleware?
+            Middleware is a function that returns a function, providing a layer which allows the user to manipulate json data responses. Also, data is passed from one middleware to to another by accessing the shared state, which is the request and response objects. This occurred after a user action and before the app reducer, store, UI, etc.
 
--   [ ] Describe a Resource?
+-   [x] Describe a Resource?
+            An API is a server software that publishes a set of endpoints. These endpoints are used by clients to manage resources. Resources, in turn, is just the information or data the client is requesting a response for. A list of hobbies or actions could be a resource. Each resource can have a single URL for request handlers to use to perform CRUD operations.  
 
--   [ ] What can the API return to help clients know if a request was successful?
+-   [x] What can the API return to help clients know if a request was successful?
+            A status code or `res.status(200)` message can be returned to indicate whether a response or request was fulfilled successfully. 
 
--   [ ] How can we partition our application into sub-applications?
+-   [x] How can we partition our application into sub-applications?
+            Express routers can easily split an application into a sub-application to make it more modular and easy to maintain, for example `.use()` where you can place the URL and the subrouter you would like to use. 
 
 ## Minimum Viable Product
 
--   [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
--   [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+-   [x] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
+-   [x] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
 
 Design and build the necessary endpoints to:
 
--   [ ] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
--   [ ] Retrieve the list of actions for a project.
+-   [x] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+-   [x] Retrieve the list of actions for a project.
 
 Please read the following sections before implementing the Minimum Viable Product, they describe how the database is structured and the files and methods available for interacting with the data.
 
